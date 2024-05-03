@@ -1,0 +1,11 @@
+[{
+    "id": 1,
+    "title": "Hello world",
+    "short_description": "Hello",
+    "thumbnail_url": "#"
+}, {
+    "id": 2,
+    "title": "Hello world 2",
+    "short_description": "Hello",
+    "thumbnail_url": "#"
+}]
