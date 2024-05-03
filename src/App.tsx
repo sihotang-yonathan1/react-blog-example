@@ -1,6 +1,8 @@
-import Route from "./Route";
+import { RoutePathProvider } from "./Route";
 import HomePage from "./app/home/page"
 import BlogPage from "./app/blog/page"
+import { PageProvider } from "./context/pageContext";
+import Layout from "./app/Layout";
 /* 1st Color Pallete 
 primary: #03AED2
 secondary: #68D2E8
@@ -24,16 +26,20 @@ eg:
 - https://ncoughlin.com/posts/react-navigation-without-react-router/
 */
 
-export default function App() {
+export default function App() {  
   return (
-    <>
-      <Route url_path={`^/$`}>
-        <HomePage />
-      </Route>
-      <Route url_path={`^/blog/(?<blog_id>\\d+)/?`}>
-        <BlogPage id={1} />
-      </Route>
-    </>
+    <PageProvider>
+      <Layout>
+        <RoutePathProvider urlPattern="^/$">
+            <HomePage />
+        </RoutePathProvider>
+
+        <RoutePathProvider urlPattern={`/blog/(?<blog_id>\\d+)`}>
+            <BlogPage />
+        </RoutePathProvider>
+  
+      </Layout>
+    </PageProvider>
   )
 }
 
