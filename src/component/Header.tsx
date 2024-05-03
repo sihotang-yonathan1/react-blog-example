@@ -3,7 +3,7 @@ const headerMenuInfo = [{
     'url': '/'
 }, {
     'name': 'blogs',
-    'url': '#'
+    'url': '/'
 }, {
     'name': 'about',
     'url': '#'
