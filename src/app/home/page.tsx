@@ -4,7 +4,6 @@ import BlogContainer from '../../component/blog/BlogContainer'
 import BlogDescription from '../../component/blog/BlogDescription'
 import BlogHeader from '../../component/blog/BlogHeader'
 import BlogTitle from '../../component/blog/BlogTitle'
-import Layout from '../Layout'
 
 
 /* 1st Color Pallete 
@@ -36,7 +35,7 @@ const data = [{
 
 export default function App() {
   return (
-    <Layout>
+    <>
         <h3 className='font-semibold text-lg'>Blog</h3>
         
         {/* Blog List */}
@@ -48,14 +47,14 @@ export default function App() {
             <BlogDescription description='Hello'/>
             </BlogContainer> */}
             {data.map((item) => (
-            <BlogContainer url={`/blog/${item.id}`} key={item.id}>
-            <BlogHeader>
-                <BlogTitle title={item.title}/>
-            </BlogHeader>
-            <BlogDescription description={item.short_description}/>
-            </BlogContainer> 
+              <BlogContainer url={`/blog/${item.id}`} key={item.id}>
+                <BlogHeader>
+                    <BlogTitle title={item.title}/>
+                </BlogHeader>
+                <BlogDescription description={item.short_description}/>
+              </BlogContainer> 
             ))}
         </div>
-    </Layout>
+    </>
   )
 }
