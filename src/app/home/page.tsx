@@ -24,14 +24,14 @@ fourth: #7ABA78
 
 const data = [{
   'id': 1,
-  'title': 'Snapdragon X Elite hadir pertengahan tahun ini',
-  'description': `Hello world`,
+  'title': 'Snapdragon X Elite hadir pertengahan tahun 2024',
+  'description': `Snapdragon X Elite adalah salah satu lini terbaru Qualcomm. SoC ini digadang-gadang sebagai processor yang dapat menyaingi SoC Apple M3. Dengan adanya SoC ini, pilihan konsumen terhadap laptop berbasis ARM akan meningkat`,
   'thumbnail_url': 'https://gadget.jagatreview.com/wp-content/uploads/2023/10/Snapdragon-X-Elite_Hero-Image.webp',
 }, {
   'id': 2,
-  'title': 'Hello world',
-  'description': 'Hello',
-  'thumbnail_url': '#',
+  'title': 'Rabbit R1 dapat dijalankan di Android',
+  'description': 'Rabbit R1 adalah sebuah perangkat yang digunakan untuk menjalankan tugas dasar dan memanfaatkan AI. Baru-baru ini, pihak Android Authority menemukan bahwa kode Rabbit R1 dapat dijalankan pada smartphone Android',
+  'thumbnail_url': 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQPzGrAY86uH0vtaEScQluYxc9kjgk2jsr4wVPBdtlxpg&s',
 }]
 
 export default function App() {
@@ -53,7 +53,7 @@ export default function App() {
                   {/* Thumbnail */}
                   <BlogThumbnail url={item.thumbnail_url} alt={item.title}/>
                   {/* Content */}
-                  <div className='h-full'>
+                  <div className='flex flex-col h-full'>
                       {/* TODO: rename BlogHeader to BlogContent? */}
                       <BlogHeader>
                           <BlogTitle title={item.title}/>
