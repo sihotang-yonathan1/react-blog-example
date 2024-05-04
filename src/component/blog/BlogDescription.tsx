@@ -1,7 +1,7 @@
 export default function BlogDescription({description}: {description: string}){
     return (
-        <div>
-            <p>{description}</p>
+        <div className="overflow-hidden text-ellipsis h-[100px] w-[100px]">
+            <p className="text-ellipsis">{description}</p>
         </div>
     )
 }
