@@ -31,7 +31,7 @@ const data = [{
   'id': 2,
   'title': 'Rabbit R1 dapat dijalankan di Android',
   'description': 'Rabbit R1 adalah sebuah perangkat yang digunakan untuk menjalankan tugas dasar dan memanfaatkan AI. Baru-baru ini, pihak Android Authority menemukan bahwa kode Rabbit R1 dapat dijalankan pada smartphone Android',
-  'thumbnail_url': 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQPzGrAY86uH0vtaEScQluYxc9kjgk2jsr4wVPBdtlxpg&s',
+  'thumbnail_url': 'https://duet-cdn.vox-cdn.com/thumbor/0x0:2880x2233/2400x1600/filters:focal(1440x1117:1441x1118):format(webp)/cdn.vox-cdn.com/uploads/chorus_asset/file/25212782/rabbit_r1_front.jpg',
 }]
 
 export default function App() {
