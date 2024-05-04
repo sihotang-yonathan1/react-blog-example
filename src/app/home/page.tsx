@@ -24,12 +24,12 @@ fourth: #7ABA78
 const data = [{
   'id': 1,
   'title': 'Hello world',
-  'short_description': 'Hello',
+  'description': `Hello world`,
   'thumbnail_url': '#',
 }, {
   'id': 2,
   'title': 'Hello world',
-  'short_description': 'Hello',
+  'description': 'Hello',
   'thumbnail_url': '#',
 }]
 
@@ -51,7 +51,7 @@ export default function App() {
                 <BlogHeader>
                     <BlogTitle title={item.title}/>
                 </BlogHeader>
-                <BlogDescription description={item.short_description}/>
+                <BlogDescription description={item.description}/>
               </BlogContainer> 
             ))}
         </div>
