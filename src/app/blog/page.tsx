@@ -30,7 +30,7 @@ export default function BlogPage(){
             <div key={index}>
                 <h3 className="text-center font-semibold text-xl">{item.title}</h3>
                 {/* Thumbnail */}
-                <div className="mx-5 my-2">
+                <div className="mx-5 my-2 flex justify-center">
                     <img src={item.thumbnail_url} alt={item.title} />
                 </div>
                 {/* Description */}
