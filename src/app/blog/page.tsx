@@ -5,12 +5,12 @@ import { RoutePathContext } from "../../Route";
 const data = [{
     'id': 1,
     'title': 'Hello world',
-    'short_description': 'Hello',
+    'description': 'Hello',
     'thumbnail_url': '#',
   }, {
     'id': 2,
     'title': 'Hello world 2',
-    'short_description': 'Hello',
+    'description': 'Hello',
     'thumbnail_url': '#',
   }]
 
@@ -29,7 +29,7 @@ export default function BlogPage(){
                 <h3 className="text-center font-semibold text-xl">{item.title}</h3>
                 {/* Description */}
                 <div>
-                    <p>{item.short_description}</p>
+                    <p>{item.description}</p>
                 </div>
 
                 {/* Thumbnail */}
