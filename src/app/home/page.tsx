@@ -40,7 +40,7 @@ export default function App() {
         <h3 className='font-semibold text-lg'>Blog</h3>
         
         {/* Blog List */}
-        <div className="flex flex-row gap-3 my-3">
+        <div className="flex flex-col gap-3 my-3">
             {/* <BlogContainer url='#'>
             <BlogHeader>
                 <BlogTitle title='Hello World'/>
@@ -49,11 +49,18 @@ export default function App() {
             </BlogContainer> */}
             {data.map((item) => (
               <BlogContainer url={`/blog/${item.id}`} key={item.id}>
-                <BlogHeader>
-                    <BlogThumbnail url={item.thumbnail_url} alt={item.title}/>
-                    <BlogTitle title={item.title}/>
-                </BlogHeader>
-                <BlogDescription description={item.description}/>
+                <div className='flex flex-row'>
+                  {/* Thumbnail */}
+                  <BlogThumbnail url={item.thumbnail_url} alt={item.title}/>
+                  {/* Content */}
+                  <div className='h-full'>
+                      {/* TODO: rename BlogHeader to BlogContent? */}
+                      <BlogHeader>
+                          <BlogTitle title={item.title}/>
+                          <BlogDescription description={item.description}/>
+                      </BlogHeader>
+                    </div>
+                </div>
               </BlogContainer> 
             ))}
         </div>
