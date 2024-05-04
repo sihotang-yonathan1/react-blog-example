@@ -1,11 +1,8 @@
 const headerMenuInfo = [{
-    'name': 'home',
+    'name': 'Home',
     'url': '/'
 }, {
-    'name': 'blogs',
-    'url': '/'
-}, {
-    'name': 'about',
+    'name': 'About',
     'url': '#'
 }]
 
