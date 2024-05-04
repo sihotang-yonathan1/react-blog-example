@@ -24,7 +24,13 @@ export default function BlogPage(){
     return (
         selected_data.map((item, index) => (
             <div key={index}>
-                <p>{item.title}</p>
+                <h3 className="text-center font-semibold text-xl">{item.title}</h3>
+                {/* Description */}
+                <div>
+                    <p>{item.short_description}</p>
+                </div>
+
+                {/* Thumbnail */}
             </div>
         ))
     )
