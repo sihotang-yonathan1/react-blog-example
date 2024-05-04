@@ -3,6 +3,7 @@ import '../../App.css'
 import BlogContainer from '../../component/blog/BlogContainer'
 import BlogDescription from '../../component/blog/BlogDescription'
 import BlogHeader from '../../component/blog/BlogHeader'
+import BlogThumbnail from '../../component/blog/BlogThumbnail'
 import BlogTitle from '../../component/blog/BlogTitle'
 
 
@@ -23,9 +24,9 @@ fourth: #7ABA78
 
 const data = [{
   'id': 1,
-  'title': 'Hello world',
+  'title': 'Snapdragon X Elite hadir pertengahan tahun ini',
   'description': `Hello world`,
-  'thumbnail_url': '#',
+  'thumbnail_url': 'https://gadget.jagatreview.com/wp-content/uploads/2023/10/Snapdragon-X-Elite_Hero-Image.webp',
 }, {
   'id': 2,
   'title': 'Hello world',
@@ -49,6 +50,7 @@ export default function App() {
             {data.map((item) => (
               <BlogContainer url={`/blog/${item.id}`} key={item.id}>
                 <BlogHeader>
+                    <BlogThumbnail url={item.thumbnail_url} alt={item.title}/>
                     <BlogTitle title={item.title}/>
                 </BlogHeader>
                 <BlogDescription description={item.description}/>
