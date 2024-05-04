@@ -20,9 +20,11 @@ export default function BlogPage(){
 
     const id = matcher?.groups?.blog_id;
     const selected_data = data.filter((items) => items.id === Number(id || "-1"))
-    console.log(selected_data)
+    const isValidId = selected_data.length > 0;
+    
+    // TODO: handle Invalid id
     return (
-        selected_data.map((item, index) => (
+        isValidId && selected_data.map((item, index) => (
             <div key={index}>
                 <h3 className="text-center font-semibold text-xl">{item.title}</h3>
                 {/* Description */}
@@ -32,6 +34,7 @@ export default function BlogPage(){
 
                 {/* Thumbnail */}
             </div>
+            
         ))
     )
 }
