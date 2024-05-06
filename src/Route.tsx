@@ -1,9 +1,6 @@
 import { createContext} from "react";
 
-// export default function Route({url_path, children}: {url_path: string, children: React.ReactNode}){
-//     return window.location.pathname.match(url_path) ? children : null;
-// }
-
+// TODO: move object type in separate file
 type RoutePathMap = {
     'url': string | null,
     'matcher': RegExpMatchArray | null

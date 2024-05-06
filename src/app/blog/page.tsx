@@ -2,6 +2,7 @@ import { useContext } from "react";
 import { RoutePathContext } from "../../Route";
 
 // TODO: read data from json file
+// TODO: unify data in one place
 const data = [{
     'id': 1,
     'title': 'Snapdragon X Elite hadir pertengahan tahun 2024',
@@ -27,6 +28,7 @@ export default function BlogPage(){
         // TODO: maybe not using map?
         // TODO: set selected blog UI in separate function
         isValidId && selected_data.map((item, index) => (
+            // TODO: set key unique, not just based on index
             <div key={index}>
                 <h3 className="text-center font-semibold text-xl">{item.title}</h3>
                 {/* Thumbnail */}

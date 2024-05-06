@@ -22,6 +22,7 @@ fourth: #7ABA78
 
 */
 
+// TODO: unify data in one place
 const data = [{
   'id': 1,
   'title': 'Snapdragon X Elite hadir pertengahan tahun 2024',
@@ -36,17 +37,12 @@ const data = [{
 
 export default function App() {
   return (
+    // TODO: semantic html
     <>
         <h3 className='font-semibold text-lg'>Blog</h3>
         
         {/* Blog List */}
         <div className="flex flex-col gap-3 my-3">
-            {/* <BlogContainer url='#'>
-            <BlogHeader>
-                <BlogTitle title='Hello World'/>
-            </BlogHeader>
-            <BlogDescription description='Hello'/>
-            </BlogContainer> */}
             {data.map((item) => (
               <BlogContainer url={`/blog/${item.id}`} key={item.id}>
                 <div className='flex flex-row'>

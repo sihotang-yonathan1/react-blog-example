@@ -28,6 +28,7 @@ eg:
 
 export default function App() {  
   return (
+    // TODO: load link based without manual routing (or probably using `react-router-dom` i guess?)
     <PageProvider>
       <Layout>
         <RoutePathProvider urlPattern="^/$">
